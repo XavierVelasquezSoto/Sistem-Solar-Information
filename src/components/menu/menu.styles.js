@@ -19,24 +19,33 @@ const StyledMenu = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	overflow: hidden;
 `;
 
 const StyledLinkHome = styled.div`
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	padding: 16px 24px;
+`;
+
+const StyledImgIcon = styled.img`
+	width: 24px;
+	height: 17px;
+	cursor: pointer;
 `;
 
 const StyledLinkContainer = styled.ul`
 	background-color: wheat;
+	position: absolute;
 	display: flex;
 	flex-direction: column;
-
 	margin: 43px 24px 0;
 `;
 
 const StyledKey = styled.li`
 	display: flex;
+
 	align-items: center;
 	padding-bottom: ${props => props.$padding};
 	align-items: start;
@@ -53,6 +62,7 @@ const StyledCircle = styled.p`
 export {
 	StyledLink,
 	StyledLinkHome,
+	StyledImgIcon,
 	StyledMenu,
 	StyledLinkContainer,
 	StyledKey,

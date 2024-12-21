@@ -2,6 +2,7 @@ import { useState } from 'react';
 import {
 	StyledLink,
 	StyledLinkHome,
+	StyledImgIcon,
 	StyledMenu,
 	StyledLinkContainer,
 	StyledKey,
@@ -10,7 +11,7 @@ import {
 import { LINKS } from '../../styles/link';
 
 const Menu = () => {
-	// const [menuActive, setMenuActive] = useState(false);
+	const [menuActive, setMenuActive] = useState(false);
 
 	return (
 		<StyledMenu>
@@ -23,29 +24,35 @@ const Menu = () => {
 							</StyledLink>
 						</li>
 					</ul>
-					<img src='public/assets/images/icon-hamburger.svg' alt='' />
+					<StyledImgIcon
+						src='/assets/images/icon-hamburger.svg'
+						alt=''
+						onClick={() => setMenuActive(!menuActive)}
+					/>
 				</StyledLinkHome>
-				<StyledLinkContainer>
-					{LINKS.map(infoPlanets => {
-						return (
-							<StyledKey
-								key={infoPlanets.id}
-								$padding={infoPlanets.paddingMobilePlanets}
-							>
-								<StyledCircle
-									$circleColor={infoPlanets.circleColor}
-								></StyledCircle>
-								<StyledLink
-									to={infoPlanets.planet}
-									$marginName={infoPlanets.marginNamePlanet}
+				{menuActive && (
+					<StyledLinkContainer>
+						{LINKS.map(infoPlanets => {
+							return (
+								<StyledKey
+									key={infoPlanets.id}
+									$padding={infoPlanets.paddingMobilePlanets}
 								>
-									{infoPlanets.text}
-								</StyledLink>
-								<img src='/assets/images/icon-chevron.svg' alt='' />
-							</StyledKey>
-						);
-					})}
-				</StyledLinkContainer>
+									<StyledCircle
+										$circleColor={infoPlanets.circleColor}
+									></StyledCircle>
+									<StyledLink
+										to={infoPlanets.planet}
+										$marginName={infoPlanets.marginNamePlanet}
+									>
+										{infoPlanets.text}
+									</StyledLink>
+									<img src='/assets/images/icon-chevron.svg' alt='' />
+								</StyledKey>
+							);
+						})}
+					</StyledLinkContainer>
+				)}
 			</nav>
 		</StyledMenu>
 	);
