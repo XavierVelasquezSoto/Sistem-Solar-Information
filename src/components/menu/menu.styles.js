@@ -6,8 +6,8 @@ import { LINKS } from '../../styles/link';
 const StyledLink = styled(NavLink)`
 	font-size: ${props =>
 		props.$mainColor ? FONTS.fontSizeAntonioL : FONTS.fontSizeSpartan3XXL};
+	margin-left: ${props => (props.$mainColor ? '' : props.$marginName)};
 
-	margin-left: ${props => (props.$mainColor ? '0' : LINKS.marginNamePlanet)};
 	/* 
 	&.active {
 		color: red;

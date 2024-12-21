@@ -35,7 +35,10 @@ const Menu = () => {
 								<StyledCircle
 									$circleColor={infoPlanets.circleColor}
 								></StyledCircle>
-								<StyledLink to={infoPlanets.planet}>
+								<StyledLink
+									to={infoPlanets.planet}
+									$marginName={infoPlanets.marginNamePlanet}
+								>
 									{infoPlanets.text}
 								</StyledLink>
 								<img src='/assets/images/icon-chevron.svg' alt='' />
