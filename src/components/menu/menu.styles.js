@@ -33,6 +33,8 @@ const StyledImgIcon = styled.img`
 	width: 24px;
 	height: 17px;
 	cursor: pointer;
+	opacity: ${props => (props.$isActive ? '0.5' : '1')};
+	transition: 0.3s;
 `;
 
 const StyledLinkContainer = styled.ul`
@@ -49,6 +51,7 @@ const StyledKey = styled.li`
 	align-items: center;
 	padding-bottom: ${props => props.$padding};
 	align-items: start;
+	border-bottom: 2px solid red;
 `;
 
 const StyledCircle = styled.p`

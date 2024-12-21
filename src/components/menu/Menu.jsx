@@ -28,6 +28,7 @@ const Menu = () => {
 						src='/assets/images/icon-hamburger.svg'
 						alt=''
 						onClick={() => setMenuActive(!menuActive)}
+						$isActive={menuActive}
 					/>
 				</StyledLinkHome>
 				{menuActive && (
