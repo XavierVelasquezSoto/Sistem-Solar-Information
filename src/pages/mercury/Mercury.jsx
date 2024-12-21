@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import Menu from '../../components/menu/Menu';
 
-const About = () => {
+const Mercury = () => {
 	return (
 		<>
 			<Menu />
-			<h1>ABOUT</h1>
+			<h1>Mercury</h1>
 			<Link to='/'>
 				<button>TO HOME</button>
 			</Link>
@@ -13,4 +13,4 @@ const About = () => {
 	);
 };
 
-export default About;
+export default Mercury;

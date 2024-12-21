@@ -1,12 +1,12 @@
 import Menu from '../../components/menu/Menu';
 
-const Home = () => {
+const Mars = () => {
 	return (
 		<>
 			<Menu />
-			<h1>Home</h1>
+			<h1>Mars</h1>
 		</>
 	);
 };
 
-export default Home;
+export default Mars;

@@ -2,13 +2,23 @@ import { BrowserRouter } from 'react-router-dom';
 import Button from './components/button/Button';
 import { GlobalStyles } from './styles/GlobalStyles';
 import Router from './router/Router';
+import Menu from './components/menu/Menu';
+import { StyledDivContainer } from './app.styles';
 
 const App = () => {
 	return (
-		<BrowserRouter>
-			<GlobalStyles />
-			<Router />
-		</BrowserRouter>
+		<StyledDivContainer>
+			<BrowserRouter>
+				<GlobalStyles />
+				<header>
+					<Menu />
+				</header>
+				<Router />
+				<main>
+					<img src='/assets/images/Solar sistem.png' alt='' />
+				</main>
+			</BrowserRouter>
+		</StyledDivContainer>
 	);
 };
 

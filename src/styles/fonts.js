@@ -5,7 +5,7 @@ export const FONTS = {
 	fontSizeAntonioL: '28px',
 	fontSizeAntonioM: '24px',
 	fontSizeAntonioS: '20px',
-	fontSizeSpartanXXXL: '15px',
+	fontSizeSpartan3XXL: '15px',
 	fontSizeSpartanXXL: '14px',
 	fontSizeSpartanXL: '12px',
 	fontSizeSpartanL: '11px',

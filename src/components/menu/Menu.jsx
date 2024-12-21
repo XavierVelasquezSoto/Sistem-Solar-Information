@@ -1,22 +1,78 @@
-import { Link } from 'react-router-dom';
-import { StyledLink } from './menu.styles';
+import { useState } from 'react';
+import {
+	StyledLink,
+	StyledLinkHome,
+	StyledMenu,
+	StyledLinkContainer,
+	StyledKey,
+	StyledCircle
+} from './menu.styles';
+import { LINKS } from '../../styles/link';
 
 const Menu = () => {
+	// const [menuActive, setMenuActive] = useState(false);
+
 	return (
-		<nav>
-			<ul>
-				<li>
-					<StyledLink to='/'>HOME</StyledLink>
-				</li>
-				<li>
-					<StyledLink to='/about'>ABOUT</StyledLink>
-				</li>
-				<li>
-					<StyledLink to='/user'>USER</StyledLink>
-				</li>
-			</ul>
-		</nav>
+		<StyledMenu>
+			<nav>
+				<StyledLinkHome>
+					<ul>
+						<li>
+							<StyledLink to='/' $mainColor>
+								THE PLANETS
+							</StyledLink>
+						</li>
+					</ul>
+					<img src='public/assets/images/icon-hamburger.svg' alt='' />
+				</StyledLinkHome>
+				<StyledLinkContainer>
+					{LINKS.map(infoPlanets => {
+						return (
+							<StyledKey
+								key={infoPlanets.id}
+								$padding={infoPlanets.paddingMobilePlanets}
+							>
+								<StyledCircle
+									$circleColor={infoPlanets.circleColor}
+								></StyledCircle>
+								<StyledLink to={infoPlanets.planet}>
+									{infoPlanets.text}
+								</StyledLink>
+								<img src='/assets/images/icon-chevron.svg' alt='' />
+							</StyledKey>
+						);
+					})}
+				</StyledLinkContainer>
+			</nav>
+		</StyledMenu>
 	);
 };
 
 export default Menu;
+
+{
+	/* <div>
+				<img src='' alt='' />
+				<button></button>
+				<button></button>
+				<button></button>
+			</div>
+			<div>
+				<div>
+					<span></span>
+					<span></span>
+				</div>
+				<div>
+					<span></span>
+					<span></span>
+				</div>
+				<div>
+					<span></span>
+					<span></span>
+				</div>
+				<div>
+					<span></span>
+					<span></span>
+				</div>
+			</div> */
+}
