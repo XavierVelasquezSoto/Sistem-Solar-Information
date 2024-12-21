@@ -5,11 +5,13 @@ import User from '../pages/user/User';
 
 const Router = () => {
 	return (
-		<Routes>
-			<Route path='/' element={<Home />} />
-			<Route path='/about' element={<About />} />
-			<Route path='/user' element={<User />} />
-		</Routes>
+		<div>
+			<Routes>
+				<Route path='/' element={<Home />} />
+				<Route path='/about' element={<About />} />
+				<Route path='/user' element={<User />} />
+			</Routes>
+		</div>
 	);
 };
 

@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import './normalize.css';
+import { COLORS } from './colors';
 export const GlobalStyles = createGlobalStyle`
     *,
     *::after,
@@ -24,7 +25,7 @@ export const GlobalStyles = createGlobalStyle`
         color: inherit;
     }
     body{
-        background-color:#333;
-        color: aliceblue;
+        background-color:${COLORS.bgColor};
+        color: ${COLORS.colorText};
     }
 `;
