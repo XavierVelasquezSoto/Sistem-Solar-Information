@@ -16,9 +16,7 @@ const Router = () => {
 				path='/'
 				element={
 					<StyledSistemSolarImg>
-						<picture>
-							<img src='/assets/images/Solar sistem.svg'></img>
-						</picture>
+						<img src='/assets/images/Solar sistem.svg'></img>
 					</StyledSistemSolarImg>
 				}
 			/>
