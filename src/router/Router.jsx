@@ -12,6 +12,10 @@ const Router = () => {
 	return (
 		<div>
 			<Routes>
+				<Route
+					path='/'
+					element={<img src='/assets/images/Solar sistem.png'></img>}
+				/>
 				<Route path='/mercury' element={<Mercury />} />
 				<Route path='/venus' element={<Venus />} />
 				<Route path='/earth' element={<Earth />} />

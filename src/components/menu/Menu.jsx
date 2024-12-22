@@ -6,7 +6,9 @@ import {
 	StyledMenu,
 	StyledLinkContainer,
 	StyledKey,
-	StyledCircle
+	StyledCircle,
+	StyledArrowHeader,
+	StyledNav
 } from './menu.styles';
 import { LINKS } from '../../styles/link';
 
@@ -15,7 +17,7 @@ const Menu = () => {
 
 	return (
 		<StyledMenu>
-			<nav>
+			<StyledNav>
 				<StyledLinkHome>
 					<ul>
 						<li>
@@ -31,30 +33,32 @@ const Menu = () => {
 						$isActive={menuActive}
 					/>
 				</StyledLinkHome>
-				{menuActive && (
-					<StyledLinkContainer>
-						{LINKS.map(infoPlanets => {
-							return (
-								<StyledKey
-									key={infoPlanets.id}
-									$padding={infoPlanets.paddingMobilePlanets}
+				<StyledLinkContainer $menuActive={menuActive}>
+					{LINKS.map(infoPlanets => {
+						return (
+							<StyledKey
+								key={infoPlanets.id}
+								$padding={infoPlanets.paddingMobilePlanets}
+							>
+								<StyledCircle
+									$circleColor={infoPlanets.circleColor}
+								></StyledCircle>
+								<StyledLink
+									to={infoPlanets.planet}
+									$marginName={infoPlanets.marginNamePlanet}
+									$marginTabletPlanets={infoPlanets.marginTabletPlanets}
 								>
-									<StyledCircle
-										$circleColor={infoPlanets.circleColor}
-									></StyledCircle>
-									<StyledLink
-										to={infoPlanets.planet}
-										$marginName={infoPlanets.marginNamePlanet}
-									>
-										{infoPlanets.text}
-									</StyledLink>
-									<img src='/assets/images/icon-chevron.svg' alt='' />
-								</StyledKey>
-							);
-						})}
-					</StyledLinkContainer>
-				)}
-			</nav>
+									{infoPlanets.text}
+								</StyledLink>
+								<StyledArrowHeader
+									src='/assets/images/icon-chevron.svg'
+									alt=''
+								/>
+							</StyledKey>
+						);
+					})}
+				</StyledLinkContainer>
+			</StyledNav>
 		</StyledMenu>
 	);
 };

@@ -7,7 +7,8 @@ export const LINKS = [
 		text: 'MERCURY',
 		circleColor: '#419EBB',
 		paddingMobilePlanets: '20px',
-		marginNamePlanet: '25px'
+		marginNamePlanet: '25px',
+		marginTabletPlanets: '0px'
 	},
 	{
 		id: v4(),
@@ -15,7 +16,8 @@ export const LINKS = [
 		text: 'VENUS',
 		circleColor: '#EDA249',
 		paddingMobilePlanets: '20px',
-		marginNamePlanet: '25px'
+		marginNamePlanet: '25px',
+		marginTabletPlanets: '33px'
 	},
 	{
 		id: v4(),
@@ -23,7 +25,8 @@ export const LINKS = [
 		text: 'EARTH',
 		circleColor: '#6D2ED5',
 		paddingMobilePlanets: '20px',
-		marginNamePlanet: '25px'
+		marginNamePlanet: '25px',
+		marginTabletPlanets: '33px'
 	},
 	{
 		id: v4(),
@@ -31,7 +34,8 @@ export const LINKS = [
 		text: 'MARS',
 		circleColor: '#D14C32',
 		paddingMobilePlanets: '20px',
-		marginNamePlanet: '25px'
+		marginNamePlanet: '25px',
+		marginTabletPlanets: '33px'
 	},
 	{
 		id: v4(),
@@ -39,7 +43,8 @@ export const LINKS = [
 		text: 'JUPITER',
 		circleColor: '#D83A34',
 		paddingMobilePlanets: '20px',
-		marginNamePlanet: '25px'
+		marginNamePlanet: '25px',
+		marginTabletPlanets: '33px'
 	},
 	{
 		id: v4(),
@@ -47,7 +52,8 @@ export const LINKS = [
 		text: 'SATURN',
 		circleColor: '#CD5120',
 		paddingMobilePlanets: '20px',
-		marginNamePlanet: '25px'
+		marginNamePlanet: '25px',
+		marginTabletPlanets: '33px'
 	},
 	{
 		id: v4(),
@@ -55,7 +61,8 @@ export const LINKS = [
 		text: 'URANUS',
 		circleColor: '#1EC1A2',
 		paddingMobilePlanets: '20px',
-		marginNamePlanet: '25px'
+		marginNamePlanet: '25px',
+		marginTabletPlanets: '33px'
 	},
 	{
 		id: v4(),
@@ -63,6 +70,7 @@ export const LINKS = [
 		text: 'NEPTUNE',
 		circleColor: '#2D68F0',
 		paddingMobilePlanets: '20px',
-		marginNamePlanet: '25px'
+		marginNamePlanet: '25px',
+		marginTabletPlanets: '33px'
 	}
 ];

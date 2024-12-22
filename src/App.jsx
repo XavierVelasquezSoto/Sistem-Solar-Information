@@ -13,9 +13,8 @@ const App = () => {
 				<header>
 					<Menu />
 				</header>
-				<Router />
 				<main>
-					<img src='/assets/images/Solar sistem.png' alt='' />
+					<Router />
 				</main>
 			</BrowserRouter>
 		</StyledDivContainer>
@@ -23,5 +22,8 @@ const App = () => {
 };
 
 export default App;
+{
+	/* <img src='/assets/images/Solar sistem.png' alt='' /> */
+}
 
 // npm install react-router-dom --- para terminal
