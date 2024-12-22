@@ -47,6 +47,7 @@ const Menu = () => {
 									to={infoPlanets.planet}
 									$marginName={infoPlanets.marginNamePlanet}
 									$marginTabletPlanets={infoPlanets.marginTabletPlanets}
+									$colorLinkHeader={infoPlanets.colorLinkHeader}
 								>
 									{infoPlanets.text}
 								</StyledLink>
