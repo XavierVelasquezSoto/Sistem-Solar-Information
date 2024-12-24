@@ -20,11 +20,13 @@ const Menu = () => {
 			<StyledNav>
 				<StyledLinkHome>
 					<ul>
-						{/* <li> */}
-						<StyledLink to='/' $mainColor>
+						<StyledLink
+							to='/'
+							$mainColor
+							onClick={() => setMenuActive(!menuActive)}
+						>
 							THE PLANETS
 						</StyledLink>
-						{/* </li> */}
 					</ul>
 					<StyledImgIcon
 						src='/assets/images/icon-hamburger.svg'
@@ -48,6 +50,7 @@ const Menu = () => {
 									$marginName={infoPlanets.marginNamePlanet}
 									$marginTabletPlanets={infoPlanets.marginTabletPlanets}
 									$colorLinkHeader={infoPlanets.colorLinkHeader}
+									onClick={() => setMenuActive(!menuActive)}
 								>
 									{infoPlanets.text}
 								</StyledLink>
@@ -65,30 +68,3 @@ const Menu = () => {
 };
 
 export default Menu;
-
-{
-	/* <div>
-				<img src='' alt='' />
-				<button></button>
-				<button></button>
-				<button></button>
-			</div>
-			<div>
-				<div>
-					<span></span>
-					<span></span>
-				</div>
-				<div>
-					<span></span>
-					<span></span>
-				</div>
-				<div>
-					<span></span>
-					<span></span>
-				</div>
-				<div>
-					<span></span>
-					<span></span>
-				</div>
-			</div> */
-}

@@ -7,6 +7,9 @@ const StyledContaienrWebPlanets = styled.div`
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 	}
+
+	@media screen and (width > 1440px) {
+	}
 `;
 
 //// botones
@@ -17,15 +20,20 @@ const StyledContainerButton = styled.ul`
 	padding: 20px 24px;
 	border-bottom: 1px solid ${COLORS.borderHeaderColor};
 	overflow: hidden;
+
 	@media screen and (width > 768px) {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 		grid-column: 2/2;
 		grid-row: 2/2;
 		border-bottom: none;
 	}
+
+	@media screen and (width > 1440px) {
+		padding: 400px 165px 0 165px;
+	}
 `;
+
 const StyledLinksButton = styled.li`
 	position: relative;
 	font-size: ${FONTS.fontSizeSpartanM};
@@ -56,6 +64,8 @@ const StyledLinksButton = styled.li`
 		font-weight: ${FONTS.fontWeightBold};
 		line-height: ${FONTS.lineHeightXL};
 		letter-spacing: ${FONTS.letterSpacing4XL};
+		border: 1px solid
+			${props => (props.$mainButton ? 'transparent' : COLORS.borderHeaderColor)};
 
 		&::after {
 			content: '';
@@ -64,10 +74,20 @@ const StyledLinksButton = styled.li`
 			height: 0;
 		}
 	}
+
+	@media screen and (width > 1440px) {
+		width: 350px;
+		margin-bottom: 18px;
+		&:hover {
+			background-color: #38384f;
+			opacity: 1;
+		}
+	}
 `;
 
 const StyledSpanButtonText = styled.span`
 	display: none;
+
 	@media screen and (width > 768px) {
 		display: flex;
 		margin-right: 28px;
@@ -79,10 +99,18 @@ const StyledSpanButtonText = styled.span`
 
 const StyledContainerPlanetsImg = styled.div`
 	padding: 98px 132px;
+
 	@media screen and (width > 768px) {
-		padding: 146px 290px;
 		grid-column: 1/3;
 		grid-row: 1/2;
+	}
+
+	@media screen and (width > 1440px) {
+		padding: 0;
+		margin-top: 242px;
+		margin-left: auto;
+		grid-column: 1/2;
+		grid-row: 1/3;
 	}
 `;
 
@@ -92,8 +120,14 @@ const StyledPlanetsImg = styled.img``;
 
 const StyledContainerTextInfo = styled.div`
 	margin: 0 24px;
-	@media screen and (width > 768px) {
-		/* margin:  */
+
+	@media screen and (width > 1440px) {
+		grid-column: 2/3;
+		grid-row: 1/3;
+		margin: 0;
+		padding-top: 126px;
+		padding-left: 165px;
+		padding-right: 280px;
 	}
 `;
 
@@ -103,10 +137,15 @@ const StyledTitlePlanet = styled.h1`
 	font-size: ${FONTS.fontSizeAntonioXL};
 	font-weight: ${FONTS.fontWeightMedium};
 	text-align: center;
+
 	@media screen and (width > 768px) {
 		font-size: ${FONTS.fontSizeAntonioXXL};
 		margin-bottom: 24px;
 		text-align: left;
+	}
+
+	@media screen and (width > 1440px) {
+		font-size: ${FONTS.fontSizeAntonio3XL};
 	}
 `;
 
@@ -117,8 +156,13 @@ const StyledTextPlanet = styled.p`
 	font-size: ${FONTS.fontSizeSpartanL};
 	font-weight: ${FONTS.fontWeightRegular};
 	text-align: center;
+
 	@media screen and (width > 768px) {
 		text-align: left;
+	}
+
+	@media screen and (width > 1440px) {
+		font-size: ${FONTS.fontSizeSpartanXXL};
 	}
 `;
 
@@ -126,6 +170,7 @@ const StyledGroupLinkReference = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
 	@media screen and (width > 768px) {
 		justify-content: start;
 	}
@@ -137,6 +182,7 @@ const StyledLinkReference = styled.span`
 	line-height: ${FONTS.lineHeightXL};
 	opacity: 0.5;
 `;
+
 const StyledLinkSource = styled.a`
 	font-size: ${FONTS.XL};
 	font-weight: ${FONTS.fontWeightBold};
@@ -145,6 +191,7 @@ const StyledLinkSource = styled.a`
 	opacity: 0.5;
 	margin-left: 4px;
 `;
+
 const StyledLinkIcon = styled.img`
 	opacity: 0.5;
 	height: 12px;
@@ -161,7 +208,12 @@ const StyledContainerMetrics = styled.div`
 	@media screen and (width > 768px) {
 		flex-direction: row;
 		grid-column: 1/3;
+		justify-content: space-between;
 		/* grid-row:; */
+	}
+
+	@media screen and (width > 1440px) {
+		justify-content: space-evenly;
 	}
 `;
 
@@ -171,6 +223,17 @@ const StyledContainerMetricsFlex = styled.div`
 	align-items: center;
 	border: 1px solid ${COLORS.borderHeaderColor};
 	padding: 9px 24px 13px 24px;
+
+	@media screen and (width > 768px) {
+		flex-direction: column;
+		width: 164px;
+		height: 88px;
+		align-items: start;
+	}
+
+	@media screen and (width > 1440px) {
+		width: 255px;
+	}
 `;
 
 const StyledMetricText = styled.p`
@@ -181,12 +244,16 @@ const StyledMetricText = styled.p`
 	line-height: ${FONTS.lineHeightM};
 	letter-spacing: ${FONTS.letterSpacingL};
 `;
+
 const StyledMetricNumber = styled.h1`
 	margin: 0;
 	font-size: ${FONTS.fontSizeAntonioS};
 	font-weight: ${FONTS.fontWeightMedium};
-
 	letter-spacing: ${FONTS.letterSpacingM};
+
+	@media screen and (width > 1440px) {
+		font-size: ${FONTS.fontSizeAntonioXL};
+	}
 `;
 
 export {

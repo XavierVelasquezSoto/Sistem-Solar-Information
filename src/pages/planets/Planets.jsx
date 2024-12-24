@@ -19,14 +19,12 @@ import {
 	StyledMetricNumber,
 	StyledMetricText
 } from './planets.styles';
-import { LINKS } from '../../styles/link';
 
 const Planets = ({ planet }) => {
 	const planetInfo = PLANETS_INFO.find(info => info.name === planet);
 
 	if (!planetInfo) return 'error';
 
-	// const [buttonActive, SetButtonActive] = useState(false);
 	const [changeInfoPlanet, setChangeInfoPlanet] = useState('overview');
 
 	/// img planets
@@ -62,7 +60,7 @@ const Planets = ({ planet }) => {
 	return (
 		<StyledContaienrWebPlanets>
 			{/* div para flex mobile y grid resto */}
-			{/* <div> */}
+
 			<StyledContainerButton>
 				<StyledLinksButton
 					onClick={() => setChangeInfoPlanet('overview')}
@@ -89,10 +87,11 @@ const Planets = ({ planet }) => {
 					SURFACE
 				</StyledLinksButton>
 			</StyledContainerButton>
-			{/* </div> */}
+
 			<StyledContainerPlanetsImg>
 				<StyledPlanetsImg src={clickPlanets} alt='' />
 			</StyledContainerPlanetsImg>
+
 			<StyledContainerTextInfo>
 				<StyledTitlePlanet>{planetInfo.name}</StyledTitlePlanet>
 				<StyledTextPlanet>{clickInfo} </StyledTextPlanet>
@@ -105,6 +104,7 @@ const Planets = ({ planet }) => {
 					/>
 				</StyledGroupLinkReference>
 			</StyledContainerTextInfo>
+
 			<StyledContainerMetrics>
 				<StyledContainerMetricsFlex>
 					<StyledMetricText>ROTATION TIME</StyledMetricText>
