@@ -1,11 +1,32 @@
 import { useState } from 'react';
 import { PLANETS_INFO } from '../../constants/infoPlanets';
+import {
+	StyledContaienrWebPlanets,
+	StyledContainerButton,
+	StyledContainerPlanetsImg,
+	StyledLinksButton,
+	StyledPlanetsImg,
+	StyledTitlePlanet,
+	StyledTextPlanet,
+	StyledGroupLinkReference,
+	StyledContainerTextInfo,
+	StyledLinkReference,
+	StyledLinkSource,
+	StyledLinkIcon,
+	StyledSpanButtonText,
+	StyledContainerMetrics,
+	StyledContainerMetricsFlex,
+	StyledMetricNumber,
+	StyledMetricText
+} from './planets.styles';
+import { LINKS } from '../../styles/link';
 
 const Planets = ({ planet }) => {
 	const planetInfo = PLANETS_INFO.find(info => info.name === planet);
 
 	if (!planetInfo) return 'error';
 
+	// const [buttonActive, SetButtonActive] = useState(false);
 	const [changeInfoPlanet, setChangeInfoPlanet] = useState('overview');
 
 	/// img planets
@@ -18,6 +39,16 @@ const Planets = ({ planet }) => {
 
 	const clickPlanets = imgPlanets[changeInfoPlanet];
 
+	/// infoPlanet
+
+	const infoPlanet = {
+		overview: planetInfo.overview.content,
+		structure: planetInfo.structure.content,
+		geology: planetInfo.geology.content
+	};
+
+	const clickInfo = infoPlanet[changeInfoPlanet];
+
 	/// wikipedia links
 
 	const linkWeb = {
@@ -29,48 +60,78 @@ const Planets = ({ planet }) => {
 	const clickWeb = linkWeb[changeInfoPlanet];
 
 	return (
-		<div>
+		<StyledContaienrWebPlanets>
 			{/* div para flex mobile y grid resto */}
-			<div>
-				<button onClick={() => setChangeInfoPlanet('overview')}>
+			{/* <div> */}
+			<StyledContainerButton>
+				<StyledLinksButton
+					onClick={() => setChangeInfoPlanet('overview')}
+					$mainButton={changeInfoPlanet === 'overview'}
+					$colorLinkHeader={planetInfo.colorLinkHeader}
+				>
+					<StyledSpanButtonText>01</StyledSpanButtonText>
 					OVERVIEW
-				</button>
-				<button onClick={() => setChangeInfoPlanet('structure')}>
+				</StyledLinksButton>
+				<StyledLinksButton
+					onClick={() => setChangeInfoPlanet('structure')}
+					$mainButton={changeInfoPlanet === 'structure'}
+					$colorLinkHeader={planetInfo.colorLinkHeader}
+				>
+					<StyledSpanButtonText>02</StyledSpanButtonText>
 					STRUCTURE
-				</button>
-				<button onClick={() => setChangeInfoPlanet('geology')}>SURFACE</button>
-			</div>
-			<div>
-				<img src={clickPlanets} alt='' />
-			</div>
-			<div>
-				<h1>{planetInfo.name}</h1>
-				<p>{planetInfo.overview.content} </p>
-				<div>
-					<span>Source:</span>
-					<a href={clickWeb}>Wikipedia</a>
-					<img src='public/assets/images/icon-source.svg' alt='arrow link' />
-				</div>
-			</div>
-			<div>
-				<div>
-					<p>ROTATION TIME</p>
-					<p>{planetInfo.rotation}</p>
-				</div>
-				<div>
-					<p>REVOLUTION TIME</p>
-					<p>{planetInfo.revolution}</p>
-				</div>
-				<div>
-					<p>RADIUS</p>
-					<p>{planetInfo.radius}</p>
-				</div>
-				<div>
-					<p>AVERAGE TEMP</p>
-					<p>{planetInfo.temperature}</p>
-				</div>
-			</div>
-		</div>
+				</StyledLinksButton>
+				<StyledLinksButton
+					onClick={() => setChangeInfoPlanet('geology')}
+					$mainButton={changeInfoPlanet === 'geology'}
+					$colorLinkHeader={planetInfo.colorLinkHeader}
+				>
+					<StyledSpanButtonText>03</StyledSpanButtonText>
+					SURFACE
+				</StyledLinksButton>
+			</StyledContainerButton>
+			{/* </div> */}
+			<StyledContainerPlanetsImg>
+				<StyledPlanetsImg src={clickPlanets} alt='' />
+			</StyledContainerPlanetsImg>
+			<StyledContainerTextInfo>
+				<StyledTitlePlanet>{planetInfo.name}</StyledTitlePlanet>
+				<StyledTextPlanet>{clickInfo} </StyledTextPlanet>
+				<StyledGroupLinkReference>
+					<StyledLinkReference>Source:</StyledLinkReference>
+					<StyledLinkSource href={clickWeb}>Wikipedia</StyledLinkSource>
+					<StyledLinkIcon
+						src='public/assets/images/icon-source.svg'
+						alt='arrow link'
+					/>
+				</StyledGroupLinkReference>
+			</StyledContainerTextInfo>
+			<StyledContainerMetrics>
+				<StyledContainerMetricsFlex>
+					<StyledMetricText>ROTATION TIME</StyledMetricText>
+					<StyledMetricNumber>
+						{planetInfo.rotation.toUpperCase()}
+					</StyledMetricNumber>
+				</StyledContainerMetricsFlex>
+				<StyledContainerMetricsFlex>
+					<StyledMetricText>REVOLUTION TIME</StyledMetricText>
+					<StyledMetricNumber>
+						{planetInfo.revolution.toUpperCase()}
+					</StyledMetricNumber>
+				</StyledContainerMetricsFlex>
+				<StyledContainerMetricsFlex>
+					<StyledMetricText>RADIUS</StyledMetricText>
+					<StyledMetricNumber>
+						{planetInfo.radius.toUpperCase()}
+					</StyledMetricNumber>
+				</StyledContainerMetricsFlex>
+				<StyledContainerMetricsFlex>
+					<StyledMetricText>AVERAGE TEMP</StyledMetricText>
+					<StyledMetricNumber>
+						{planetInfo.temperature.toUpperCase()}
+					</StyledMetricNumber>
+				</StyledContainerMetricsFlex>
+			</StyledContainerMetrics>
+		</StyledContaienrWebPlanets>
 	);
 };
 

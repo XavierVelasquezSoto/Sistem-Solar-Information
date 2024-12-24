@@ -24,8 +24,9 @@ export const PLANETS_INFO = [
 		images: {
 			planet: '/assets/images/planet-mercury.svg',
 			internal: '/assets/images/planet-mercury-internal.svg',
-			geology: '/assets/geology-mercury.png'
-		}
+			geology: '/assets/images/geology-mercury.png'
+		},
+		colorLinkHeader: '#419EBB'
 	},
 	{
 		name: 'Venus',
@@ -52,7 +53,8 @@ export const PLANETS_INFO = [
 			planet: '/assets/images/planet-venus.svg ',
 			internal: '/assets/images/planet-venus-internal.svg ',
 			geology: ' '
-		}
+		},
+		colorLinkHeader: '#EDA249'
 	},
 	{
 		name: 'Earth',
@@ -79,7 +81,8 @@ export const PLANETS_INFO = [
 			planet: '/assets/images/planet-earth.svg ',
 			internal: '/assets/images/planet-earth-internal.svg ',
 			geology: ' '
-		}
+		},
+		colorLinkHeader: '#6D2ED5'
 	},
 	{
 		name: 'Mars',
@@ -106,7 +109,8 @@ export const PLANETS_INFO = [
 			planet: ' /assets/images/planet-mars.svg',
 			internal: '/assets/images/planet-mars-internal.svg ',
 			geology: ' '
-		}
+		},
+		colorLinkHeader: '#D14C32'
 	},
 	{
 		name: 'Jupiter',
@@ -134,7 +138,8 @@ export const PLANETS_INFO = [
 			planet: ' /assets/images/planet-jupiter.svg',
 			internal: '/assets/images/planet-jupiter-internal.svg',
 			geology: ' '
-		}
+		},
+		colorLinkHeader: '#D83A34'
 	},
 	{
 		name: 'Saturn',
@@ -161,7 +166,8 @@ export const PLANETS_INFO = [
 			planet: '/assets/images/planet-saturn.svg ',
 			internal: ' /assets/images/planet-saturn-internal.svg',
 			geology: ' '
-		}
+		},
+		colorLinkHeader: '#CD5120'
 	},
 	{
 		name: 'Uranus',
@@ -188,7 +194,8 @@ export const PLANETS_INFO = [
 			planet: ' /assets/images/planet-uranus.svg',
 			internal: '/assets/images/planet-uranus-internal.svg ',
 			geology: ' '
-		}
+		},
+		colorLinkHeader: '#1EC1A2'
 	},
 	{
 		name: 'Neptune',
@@ -215,6 +222,7 @@ export const PLANETS_INFO = [
 			planet: ' /assets/images/planet-neptune.svg',
 			internal: '/assets/images/planet-neptune-internal.svg',
 			geology: ' '
-		}
+		},
+		colorLinkHeader: '#2D68F0'
 	}
 ];

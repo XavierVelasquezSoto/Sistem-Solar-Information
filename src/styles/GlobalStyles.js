@@ -27,5 +27,9 @@ export const GlobalStyles = createGlobalStyle`
     body{
         background-color:${COLORS.bgColor};
         color: ${COLORS.colorText};
+        font-family: "League Spartan", serif;
+    }
+    h1{
+        font-family: "Antonio", serif;
     }
 `;

@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { FONTS } from '../../styles/fonts';
-import { LINKS } from '../../styles/link';
+// import { LINKS } from '../../styles/link';
 import { COLORS } from '../../styles/colors';
 
 const StyledLink = styled(NavLink)`

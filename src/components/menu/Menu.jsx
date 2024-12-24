@@ -20,11 +20,11 @@ const Menu = () => {
 			<StyledNav>
 				<StyledLinkHome>
 					<ul>
-						<li>
-							<StyledLink to='/' $mainColor>
-								THE PLANETS
-							</StyledLink>
-						</li>
+						{/* <li> */}
+						<StyledLink to='/' $mainColor>
+							THE PLANETS
+						</StyledLink>
+						{/* </li> */}
 					</ul>
 					<StyledImgIcon
 						src='/assets/images/icon-hamburger.svg'
