@@ -91,6 +91,7 @@ const StyledImgIcon = styled.img`
 	height: 17px;
 	cursor: pointer;
 	transition: 0.3s;
+	opacity: ${props => (props.$isActive ? '0.5' : '1')};
 
 	@media screen and (width > 768px) {
 		display: none;
