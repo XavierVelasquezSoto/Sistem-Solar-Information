@@ -15,6 +15,9 @@ import { LINKS } from '../../styles/link';
 const Menu = () => {
 	const [menuActive, setMenuActive] = useState(false);
 
+	// const homeActive = () => setMenuActive(!menuActive);
+	// {!homeActive}
+
 	return (
 		<StyledMenu>
 			<StyledNav>
@@ -23,7 +26,7 @@ const Menu = () => {
 						<StyledLink
 							to='/'
 							$mainColor
-							onClick={() => setMenuActive(!menuActive)}
+							onClick={() => setMenuActive(menuActive)}
 						>
 							THE PLANETS
 						</StyledLink>
