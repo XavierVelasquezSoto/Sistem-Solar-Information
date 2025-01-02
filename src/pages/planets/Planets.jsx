@@ -6,6 +6,7 @@ import {
 	StyledContainerPlanetsImg,
 	StyledLinksButton,
 	StyledPlanetsImg,
+	StyledPlanetsImgCore,
 	StyledTitlePlanet,
 	StyledTextPlanet,
 	StyledGroupLinkReference,
@@ -89,7 +90,14 @@ const Planets = ({ planet }) => {
 			</StyledContainerButton>
 
 			<StyledContainerPlanetsImg>
-				<StyledPlanetsImg src={clickPlanets} alt='' />
+				{changeInfoPlanet === 'geology' ? (
+					<>
+						<StyledPlanetsImg src={planetInfo.images.geology[1]} />
+						<StyledPlanetsImgCore src={planetInfo.images.geology[2]} />
+					</>
+				) : (
+					<img src={clickPlanets} alt='' />
+				)}
 			</StyledContainerPlanetsImg>
 
 			<StyledContainerTextInfo>

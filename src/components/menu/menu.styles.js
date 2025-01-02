@@ -103,8 +103,9 @@ const StyledLinkContainer = styled.ul`
 	position: absolute;
 	display: ${props => (props.$menuActive ? 'flex' : 'none')};
 	flex-direction: column;
-	margin: 0px 24px 0;
-	width: 327px;
+
+	padding: 0 20px;
+	width: 100%;
 	z-index: 10;
 
 	@media screen and (width > 768px) {
@@ -126,9 +127,8 @@ const StyledKey = styled.li`
 	display: flex;
 	align-items: center;
 	padding-bottom: ${props => props.$padding};
-
 	border-bottom: 1px solid ${COLORS.borderHeaderColor};
-
+	padding: 10px;
 	@media screen and (width > 1440px) {
 		border-bottom: none;
 	}

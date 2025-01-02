@@ -1,7 +1,7 @@
 export const COLORS = {
 	colorText: '#FFFFFF',
 	bgColor: '#070724',
-	borderHeaderColor: 'rgb(131,131,145,0.5)',
+	borderHeaderColor: 'rgb(131,131,145,0.3)',
 	buttonHoverColor: '#D8D8D8',
 	activeButtonMercury: '#419EBB',
 	activeButtonVenus: '#EDA249',

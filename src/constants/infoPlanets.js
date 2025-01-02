@@ -24,7 +24,10 @@ export const PLANETS_INFO = [
 		images: {
 			planet: '/assets/images/planet-mercury.svg',
 			internal: '/assets/images/planet-mercury-internal.svg',
-			geology: '/assets/images/geology-mercury.png'
+			geology: {
+				1: '/assets/images/planet-mercury.svg',
+				2: '/assets/images/geology-mercury.png'
+			}
 		},
 		colorLinkHeader: '#419EBB'
 	},

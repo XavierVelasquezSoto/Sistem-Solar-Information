@@ -114,7 +114,26 @@ const StyledContainerPlanetsImg = styled.div`
 	}
 `;
 
-const StyledPlanetsImg = styled.img``;
+const StyledPlanetsImg = styled.img`
+	position: relative;
+`;
+const StyledPlanetsImgCore = styled.img`
+	position: absolute;
+	top: 300px;
+	left: 40%;
+	max-height: 15%;
+
+	@media screen and (width > 768px) {
+		height: 200px;
+		left: 215px;
+		top: 500px;
+	}
+
+	@media screen and (width > 1440px) {
+		left: 35.8%;
+		top: 56%;
+	}
+`;
 
 /// infoText
 
@@ -263,6 +282,7 @@ export {
 	StyledSpanButtonText,
 	StyledContainerPlanetsImg,
 	StyledPlanetsImg,
+	StyledPlanetsImgCore,
 	StyledContainerTextInfo,
 	StyledTitlePlanet,
 	StyledTextPlanet,
