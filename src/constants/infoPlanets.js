@@ -55,7 +55,11 @@ export const PLANETS_INFO = [
 		images: {
 			planet: '/assets/images/planet-venus.svg ',
 			internal: '/assets/images/planet-venus-internal.svg ',
-			geology: ' /assets/images/geology-venus.png'
+
+			geology: {
+				1: '/assets/images/planet-venus.svg ',
+				2: ' /assets/images/geology-venus.png'
+			}
 		},
 		colorLinkHeader: '#EDA249'
 	},
@@ -83,7 +87,10 @@ export const PLANETS_INFO = [
 		images: {
 			planet: '/assets/images/planet-earth.svg ',
 			internal: '/assets/images/planet-earth-internal.svg ',
-			geology: ' /assets/images/geology-earth.png'
+			geology: {
+				1: '/assets/images/planet-earth.svg ',
+				2: ' /assets/images/geology-earth.png'
+			}
 		},
 		colorLinkHeader: '#6D2ED5'
 	},
@@ -111,7 +118,10 @@ export const PLANETS_INFO = [
 		images: {
 			planet: ' /assets/images/planet-mars.svg',
 			internal: '/assets/images/planet-mars-internal.svg ',
-			geology: ' /assets/images/geology-mars.png'
+			geology: {
+				1: ' /assets/images/planet-mars.svg',
+				2: ' /assets/images/geology-mars.png'
+			}
 		},
 		colorLinkHeader: '#D14C32'
 	},
@@ -140,7 +150,10 @@ export const PLANETS_INFO = [
 		images: {
 			planet: ' /assets/images/planet-jupiter.svg',
 			internal: '/assets/images/planet-jupiter-internal.svg',
-			geology: '/assets/images/geology-jupiter.png '
+			geology: {
+				1: ' /assets/images/planet-jupiter.svg',
+				2: '/assets/images/geology-jupiter.png '
+			}
 		},
 		colorLinkHeader: '#D83A34'
 	},
@@ -168,7 +181,10 @@ export const PLANETS_INFO = [
 		images: {
 			planet: '/assets/images/planet-saturn.svg ',
 			internal: ' /assets/images/planet-saturn-internal.svg',
-			geology: ' /assets/images/geology-saturn.png'
+			geology: {
+				1: '/assets/images/planet-saturn.svg ',
+				2: ' /assets/images/geology-saturn.png'
+			}
 		},
 		colorLinkHeader: '#CD5120'
 	},
@@ -196,7 +212,10 @@ export const PLANETS_INFO = [
 		images: {
 			planet: ' /assets/images/planet-uranus.svg',
 			internal: '/assets/images/planet-uranus-internal.svg ',
-			geology: '/assets/images/geology-uranus.png '
+			geology: {
+				1: ' /assets/images/planet-uranus.svg',
+				2: '/assets/images/geology-uranus.png '
+			}
 		},
 		colorLinkHeader: '#1EC1A2'
 	},
@@ -224,7 +243,10 @@ export const PLANETS_INFO = [
 		images: {
 			planet: ' /assets/images/planet-neptune.svg',
 			internal: '/assets/images/planet-neptune-internal.svg',
-			geology: '/assets/images/geology-neptune.png '
+			geology: {
+				1: ' /assets/images/planet-neptune.svg',
+				2: '/assets/images/geology-neptune.png '
+			}
 		},
 		colorLinkHeader: '#2D68F0'
 	}
