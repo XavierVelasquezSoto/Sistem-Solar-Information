@@ -22,15 +22,15 @@ const Menu = () => {
 		<StyledMenu>
 			<StyledNav>
 				<StyledLinkHome>
-					<ul>
-						<StyledLink
-							to='/'
-							$mainColor
-							onClick={() => setMenuActive(menuActive)}
-						>
-							THE PLANETS
-						</StyledLink>
-					</ul>
+					{/* <ul> */}
+					<StyledLink
+						to='/'
+						$mainColor
+						onClick={() => setMenuActive(menuActive)}
+					>
+						THE PLANETS
+					</StyledLink>
+					{/* </ul> */}
 					<StyledImgIcon
 						src='/assets/images/icon-hamburger.svg'
 						alt=''

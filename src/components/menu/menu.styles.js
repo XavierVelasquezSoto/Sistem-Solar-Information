@@ -103,8 +103,9 @@ const StyledLinkContainer = styled.ul`
 	position: absolute;
 	display: ${props => (props.$menuActive ? 'flex' : 'none')};
 	flex-direction: column;
-	margin: 43px 24px 0;
+	margin: 0px 24px 0;
 	width: 327px;
+	z-index: 10;
 
 	@media screen and (width > 768px) {
 		width: auto;

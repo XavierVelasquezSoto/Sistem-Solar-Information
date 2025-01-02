@@ -13,7 +13,6 @@ const App = () => {
 				{/* <header> */}
 				<Menu />
 				{/* </header> */}
-
 				<Router />
 			</BrowserRouter>
 		</StyledDivContainer>
