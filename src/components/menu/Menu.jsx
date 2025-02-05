@@ -22,7 +22,6 @@ const Menu = () => {
 		<StyledMenu>
 			<StyledNav>
 				<StyledLinkHome>
-					{/* <ul> */}
 					<StyledLink
 						to='/'
 						$mainColor
@@ -30,7 +29,7 @@ const Menu = () => {
 					>
 						THE PLANETS
 					</StyledLink>
-					{/* </ul> */}
+
 					<StyledImgIcon
 						src='/assets/images/icon-hamburger.svg'
 						alt=''
